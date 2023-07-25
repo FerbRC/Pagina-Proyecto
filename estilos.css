@@ -1,0 +1,610 @@
+body {
+    background-image: url("https://www.roc21.com/blog/wp-content/uploads/2012/09/fondos-para-pa%CC%81ginas-web-6.jpg");
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin: 0;
+  }
+
+  header{
+    width: 100%;
+  }
+
+  #menu-generico,
+  #registro-menu{
+    display: none;
+  }
+
+  #menu-generico:checked ~ .menu-Principal{
+    margin: 0;
+   }
+
+   #registro-menu:checked ~ .menu-Loggin{
+    display: block;
+   }
+  header label{
+    display: block;
+    color: white;
+    font-size: 24px;
+  }
+
+  label.opcion-izquierda {
+    width: 28px;
+  }
+
+  label.opcion-derecha {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    padding: 5px;
+  }
+  
+  header label:hover {
+ cursor: pointer;
+ color: #12CAA0;
+  }
+
+  
+
+.menu-Principal {
+  margin: 0;
+ list-style: none;
+ padding: 0;
+ background-color: white;
+ width: 150px;
+ margin-left: -70%;
+ transition: margin-left 0.3s ease; 
+  }
+
+  .menu-Loggin {
+    display: none;
+    position: absolute;
+    top: 35px;
+    right: 0;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    z-index: 1;
+}
+.texto-centrado {
+  text-align: center;
+}
+p strong{
+  color: white;
+  font-family: 'Average Sans', sans-serif;
+  letter-spacing: 40px;
+  text-align: center;
+}
+.TituloA {
+  text-align: center;
+  position: relative;
+}
+
+.TituloP {
+  font-size: 120px;
+  font-weight: bold;
+  font-family: 'Germania One', cursive;
+  background-image: url("https://p4.wallpaperbetter.com/wallpaper/131/492/954/kimi-no-na-wa-makoto-shinkai-starry-night-comet-wallpaper-preview.jpg"), linear-gradient(to right, transparent, transparent); /* Agregamos la imagen de fondo y un gradiente */
+  background-size: cover, auto; 
+  background-position: center, left; 
+  background-repeat: no-repeat, repeat; 
+  -webkit-background-clip: text; 
+  background-clip: text; 
+  color: transparent;
+}
+
+.container {
+  position: relative; /* Cambiamos la posición a relativa para el contenedor */
+  display: inline-block; /* Cambiamos el display a inline-block para que el ancho se ajuste al contenido */
+}
+.btn {
+    margin-top: calc(50% + 25px);
+    position: absolute;
+    bottom: 10px;
+    display: inline-block;
+    width: 277px;
+    height: 50px;
+    font-size: 1em;
+    font-weight: bold;
+    line-height: 60px;
+    text-align: center;
+    text-transform: uppercase;
+    background-color: transparent;
+    cursor: pointer;
+    text-decoration:none;
+    font-family: 'Roboto', sans-serif;
+    font-weight:900;
+    font-size:17px;
+    letter-spacing: 0.045em;
+}
+
+.btn svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.btn svg rect {
+    //stroke: #EC0033;
+    stroke-width: 4;
+    stroke-dasharray: 353, 0;
+    stroke-dashoffset: 0;
+    -webkit-transition: all 600ms ease;
+    transition: all 600ms ease;
+}
+
+.btn span{
+  background: rgb(255,130,130);
+  background: -moz-linear-gradient(left,  rgba(255,130,130,1) 0%, rgba(225,120,237,1) 100%);
+  background: -webkit-linear-gradient(left,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
+  background: linear-gradient(to right,  rgba(255,130,130,1) 0%,rgba(225,120,237,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff8282', endColorstr='#e178ed',GradientType=1 );
+  
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn:hover svg rect {
+    stroke-width: 4;
+    stroke-dasharray: 196, 543;
+    stroke-dashoffset: 437;
+}
+
+.contenedor2 {
+  position: absolute;
+  bottom: -8px;
+  left: -300px;
+  transform: translate(20px, 20px);
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.NombreXD {
+  margin: 20px auto;
+  border: none;
+  padding: 10px 44px;
+  font-size: 36px;
+  position: relative;
+  z-index: 1; /* Añadimos una propiedad z-index para que el contenido del botón esté por encima del pseudo-elemento */
+	color: white;
+}
+
+.NombreXD::before {
+  transition: all 0.85s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  content: '';
+  width: 50%;
+  height: 100%;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Añadimos una propiedad z-index para que el pseudo-elemento esté detrás del contenido del botón */
+}
+
+.NombreXD.rounded {
+  border-radius: 50px;
+}
+
+.NombreXD.rounded::before {
+  border-radius: 50px;
+  width: 25%;
+  background: red;
+}
+.NombreXD:hover {
+  color: white; /* Cambiamos el color del texto a blanco cuando se pasa el mouse por encima */
+}
+
+.NombreXD.rounded:hover::before {
+  background: red;
+  width: 100%;
+}
+
+.contenedor-principal {
+  display: flex; /* Los recuadros estarán en línea */
+}
+
+.contenedorA {
+  position: relative;
+}
+.recuadro1 {
+  margin-top: 80px;
+  margin-left: 20px;
+  width: 305px;
+  height: 500px;
+  display: flex;
+  background-color: white;
+  border: 2px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recuadro1:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px,-5px);
+  cursor: pointer;
+}
+
+.imagen1 {
+  width: 300px; /* Ajusta el tamaño de la imagen 1 */
+  top: 5500px;/* Ajusta la posición vertical de la imagen 1 */
+  left: 50px; /* Ajusta la posición horizontal de la imagen 1 */
+  object-fit: contain;
+}
+
+.contenedorB {
+  position: relative;
+}
+.recuadro2 {
+  margin-top: 80px;
+  margin-left: 20px;
+  width: 400px;
+  height:300px;
+  display: flex;
+  background: linear-gradient(135deg, rgba(147, 112, 219, 1) 40%, rgba(147, 112, 219, 0.4) 50%, rgba(147, 112, 219, 1) 60%);
+    transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recuadro2:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px,-5px);
+  cursor: pointer;
+}
+
+.contenedorC {
+  position: relative;
+}
+.recuadro3 {
+  margin-top: 80px;
+  margin-left: 20px;
+  width: 200px;
+  height: 300px;
+  display: flex;
+  background-color: #46ECD0;
+  border: 2px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recuadro3:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px,-5px);
+  cursor: pointer;
+}
+
+.contenedorD {
+  position: relative;
+}
+.recuadro4 {
+  margin-top: 80px;
+  margin-left: 20px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  background: linear-gradient(135deg, rgb(50, 126, 107) 40%, rgba(78, 214, 119, 0.4) 50%, rgb(140, 248, 113) 60%);
+    transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recuadro4:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px,-5px);
+  cursor: pointer;
+}
+
+
+.contenedorE {
+  margin-top: 325px;
+  margin-left:-973px;
+  position: relative;
+}
+.recuadro5 {
+  margin-top: 80px;
+  margin-left: 20px;
+  width: 625px;
+  height: 175px;
+  display: flex;
+  background-color: #A346EC;
+  border: 2px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recuadro5:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px,-5px);
+  cursor: pointer;
+}
+
+.contenedorF {
+  margin-top: 325px;
+  margin-left: 0;
+  position: relative;
+}
+
+.recuadro6 {
+  margin-top: 80px;
+  margin-left: 20px;
+  width: 300px;
+  height: 175px;
+  display: flex;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcEwfgD2VGPXqEJxCd_V90vhiLwGQp60pLmg&usqp=CAU");
+  border: 2px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recuadro6:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px,-5px);
+  cursor: pointer;
+}
+
+.contenedorG {
+  margin-top: 585px;
+  margin-left:-1300px;
+  position: relative;
+}
+
+.recuadro7 {
+  margin-top: 20px; /* Ajusta la separación vertical entre recuadro 1 y recuadro 7 */
+  margin-left: 20px;
+  width: 305px;
+  height: 300px;
+  display: flex;
+  background-color: #D71111;
+  border: 2px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recuadro7:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px,-5px);
+  cursor: pointer;
+}
+
+.contenedorH {
+  margin-top: 585px; 
+  margin-left: 0px; 
+  position: relative;
+}
+
+.recuadro8 {
+  margin-top: 20px; 
+  margin-left: 20px;
+  width: 305px;
+  height: 300px;
+  display: flex;
+  background-image: url("https://store.ubisoft.com/dw/image/v2/ABBS_PRD/on/demandware.static/-/Sites-masterCatalog/default/dwb708eeaa/images/large/6436a2cd77bbdb7551d94be6.jpg?sw=341&sh=450&sm=fit");
+  border: 2px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recuadro8:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px, -5px);
+  cursor: pointer;
+}
+
+.contenedorI {
+  margin-top: 585px; 
+  margin-left: 10px;
+  position: relative;
+}
+
+.recuadro9 {
+  margin-top: 20px; 
+  margin-left: 18px;
+  width: 285px;
+  height: 650px;
+  display: flex;
+  background-color: transparent;
+  border: 2px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recuadro9:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px, -5px);
+  cursor: pointer;
+}
+
+.imagen2 {
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+}
+
+
+
+.contenedorJ {
+  margin-top: 525px; /* Ajusta la separación vertical entre recuadro 6 y recuadro 10 */
+  margin-left: 0px; /* Ajusta la separación lateral entre recuadro 9 y recuadro 10 */
+  position: relative;
+}
+
+.recuadro10 {
+  margin-top: 80px;
+  margin-left: 20px;
+  width: 305px;
+  height: 300px;
+  display: flex;
+  background-color: #DCB0B0; 
+  border: 2px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recuadro10:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px, -5px);
+  cursor: pointer;
+}
+
+.contenedork {
+  margin-top: -585px;
+  margin-left:-1285px;
+  position: relative;
+}
+
+.recuadro11 {
+  margin-top: 1510px;
+  margin-left: 0px;
+  width: 370px;
+  height: 330px;
+  display: flex;
+  background-color: #C1C1C1;
+  border: 2px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recuadro11:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px,-5px);
+  cursor: pointer;
+}
+
+.contenedorL {
+  position: relative;
+}
+
+.recuadro12 {
+  margin-top: 925px;
+  margin-left: 20px;
+  width: 240px;
+  height: 330px;
+  display: flex;
+  background-color: #C5A824;
+  border: 2px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recuadro12:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px,-5px);
+  cursor: pointer;
+}
+
+.contenedorM {
+  margin-top: 925px;
+  margin-left: 340px; /* Espacio entre recuadro 10 y recuadro 13 */
+}
+
+.recuadro13 {
+  width: 305px;
+  height: 330px;
+  display: flex;
+  background-image: url("https://static.elcorreo.com/www/multimedia/201806/05/media/Dark-Souls-Remastered.jpg");
+  background-position: center, left; 
+  border: 2px solid #ccc;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recuadro13:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transform: translate(-5px, -5px);
+  cursor: pointer;
+}
+
+
+footer{
+ padding: 40px;
+ margin-top: auto;
+}
+
+.push{
+  color: white;
+font-family: 'Average Sans', sans-serif;
+font-size: 20px;
+letter-spacing: 10px;
+}
+
+.frasesita{
+  color: white;
+}
+
+.contenedorFrases {
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -100px;
+}
+
+.abaut{
+  color: white;
+  margin: 0; /* Eliminar márgenes predeterminados */
+  padding: 10px;
+}
+
+.abaut:hover {
+  cursor: pointer;
+}
+
+.vacantes{
+  color: white;
+  text-align: 20px;
+  margin: 0; /* Eliminar márgenes predeterminados */
+  padding: 10px;
+}
+
+.vacantes:hover {
+  cursor: pointer;
+}
+
+.contenedorFrases2 {
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 13px;
+}
+
+.eventos{
+  color: white;
+  margin: 0; /* Eliminar márgenes predeterminados */
+  padding: 10px;
+}
+
+.eventos:hover {
+  cursor: pointer;
+}
+
+.contactos{
+  color: white;
+  margin: 0; /* Eliminar márgenes predeterminados */
+  padding: 10px;
+}
+
+.contactos:hover {
+  cursor: pointer;
+}
+
+.redes{
+  margin: 0;
+  display: flex;
+  justify-content:right;
+  align-items: center;
+  margin-top: -80px;
+}
+
+i{
+ font-size: 25px;
+ color: white;
+ margin: 10px;
+ border-radius: 50%;
+
+}
+
+
+
+
+
+
+
+
+
+
+
